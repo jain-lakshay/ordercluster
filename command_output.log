@@ -1,1 +1,266 @@
 
+Command: shopt -s histappend
+Output:
+
+Exit Code: 0
+----
+Command: pwd
+Output:
+/Users/lakshayjain/Desktop/order_clustering
+Exit Code: 0
+----
+Command: python src/main.py
+Output:
+bash: python: command not found
+Exit Code: 127
+----
+Command: source venv/bin/activate
+Output:
+
+Exit Code: 0
+----
+Command: python src/main.py
+Output:
+bash: python: command not found
+Exit Code: 127
+----
+Command: python3 src/main.py
+Output:
+Traceback (most recent call last):
+  File "/Users/lakshayjain/Desktop/order_clustering/src/main.py", line 3, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Exit Code: 1
+----
+Command: which python
+Output:
+
+Exit Code: 1
+----
+Command: python3 --version
+Output:
+Python 3.12.7
+Exit Code: 0
+----
+Command: which python
+Output:
+
+Exit Code: 1
+----
+Command: which python3
+Output:
+/opt/homebrew/bin/python3
+Exit Code: 0
+----
+Command: source venv/bin/activate
+Output:
+
+Exit Code: 0
+----
+Command: pip install --upgrade pip
+Output:
+bash: pip: command not found
+Exit Code: 127
+----
+Command: pip install pandas scikit-learn geopy
+Output:
+bash: pip: command not found
+Exit Code: 127
+----
+Command: python3 -m ensurepip --default-pip
+Output:
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+    
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+    
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+    
+    brew install pipx
+    
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+    
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+    
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ensurepip/__main__.py", line 5, in <module>
+    sys.exit(ensurepip._main())
+             ^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ensurepip/__init__.py", line 284, in _main
+    return _bootstrap(
+           ^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ensurepip/__init__.py", line 200, in _bootstrap
+    return _run_pip([*args, *_PACKAGE_NAMES], additional_paths)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ensurepip/__init__.py", line 101, in _run_pip
+    return subprocess.run(cmd, check=True).returncode
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/homebrew/opt/python@3.12/bin/python3.12', '-W', 'ignore::DeprecationWarning', '-c', '\nimport runpy\nimport sys\nsys.path = [\'/var/folders/dk/ppb18wv91mj5fyqg1wyp92yh0000gn/T/tmp_oxuylz0/pip-24.2-py3-none-any.whl\'] + sys.path\nsys.argv[1:] = [\'install\', \'--no-cache-dir\', \'--no-index\', \'--find-links\', \'/var/folders/dk/ppb18wv91mj5fyqg1wyp92yh0000gn/T/tmp_oxuylz0\', \'pip\']\nrunpy.run_module("pip", run_name="__main__", alter_sys=True)\n']' returned non-zero exit status 1.
+Exit Code: 1
+----
+Command: which pip
+Output:
+
+Exit Code: 1
+----
+Command: which pip3
+Output:
+/opt/homebrew/bin/pip3
+Exit Code: 0
+----
+Command: python3 -m pip install pandas scikit-learn geopy
+Output:
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+[notice] To update, run: python3.12 -m pip install --upgrade pip
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+    
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+    
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+    
+    brew install pipx
+    
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+    
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+    
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Exit Code: 1
+----
+Command: python3 src/main.py
+Output:
+Traceback (most recent call last):
+  File "/Users/lakshayjain/Desktop/order_clustering/src/main.py", line 3, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Exit Code: 1
+----
+Command: rm -rf venv
+Output:
+
+Exit Code: 0
+----
+Command: python3 -m venv venv
+Output:
+
+Exit Code: 0
+----
+Command: source venv/bin/activate
+Output:
+
+Exit Code: 0
+----
+Command: which python
+Output:
+/Users/lakshayjain/Desktop/order_clustering/venv/bin/python
+Exit Code: 0
+----
+Command: which pip
+Output:
+/Users/lakshayjain/Desktop/order_clustering/venv/bin/pip
+Exit Code: 0
+----
+Command: pip install pandas scikit-learn geopy
+Output:
+Requirement already satisfied: pandas in ./venv/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: scikit-learn in ./venv/lib/python3.12/site-packages (1.6.1)
+Requirement already satisfied: geopy in ./venv/lib/python3.12/site-packages (2.4.1)
+Requirement already satisfied: numpy>=1.26.0 in ./venv/lib/python3.12/site-packages (from pandas) (2.2.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./venv/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./venv/lib/python3.12/site-packages (from pandas) (2025.1)
+Requirement already satisfied: tzdata>=2022.7 in ./venv/lib/python3.12/site-packages (from pandas) (2025.1)
+Requirement already satisfied: scipy>=1.6.0 in ./venv/lib/python3.12/site-packages (from scikit-learn) (1.15.2)
+Requirement already satisfied: joblib>=1.2.0 in ./venv/lib/python3.12/site-packages (from scikit-learn) (1.4.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./venv/lib/python3.12/site-packages (from scikit-learn) (3.5.0)
+Requirement already satisfied: geographiclib<3,>=1.52 in ./venv/lib/python3.12/site-packages (from geopy) (2.0)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+[notice] To update, run: pip install --upgrade pip
+Exit Code: 0
+----
+Command: python src/main.py
+Output:
+
+Cluster -1:
+  Order 4.0 at (28.7005, 77.1)
+
+Cluster 0:
+  Order 1.0 at (28.7041, 77.1025)
+  Order 2.0 at (28.7042, 77.1026)
+  Order 3.0 at (28.705, 77.1035)
+  Order 5.0 at (28.7043, 77.1027)
+Exit Code: 0
+----
+Command: python3 -m pip install pandas scikit-learn geopy matplotlib
+Output:
+Requirement already satisfied: pandas in ./venv/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: scikit-learn in ./venv/lib/python3.12/site-packages (1.6.1)
+Requirement already satisfied: geopy in ./venv/lib/python3.12/site-packages (2.4.1)
+Requirement already satisfied: matplotlib in ./venv/lib/python3.12/site-packages (3.10.0)
+Requirement already satisfied: numpy>=1.26.0 in ./venv/lib/python3.12/site-packages (from pandas) (2.2.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./venv/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./venv/lib/python3.12/site-packages (from pandas) (2025.1)
+Requirement already satisfied: tzdata>=2022.7 in ./venv/lib/python3.12/site-packages (from pandas) (2025.1)
+Requirement already satisfied: scipy>=1.6.0 in ./venv/lib/python3.12/site-packages (from scikit-learn) (1.15.2)
+Requirement already satisfied: joblib>=1.2.0 in ./venv/lib/python3.12/site-packages (from scikit-learn) (1.4.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./venv/lib/python3.12/site-packages (from scikit-learn) (3.5.0)
+Requirement already satisfied: geographiclib<3,>=1.52 in ./venv/lib/python3.12/site-packages (from geopy) (2.0)
+Requirement already satisfied: contourpy>=1.0.1 in ./venv/lib/python3.12/site-packages (from matplotlib) (1.3.1)
+Requirement already satisfied: cycler>=0.10 in ./venv/lib/python3.12/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./venv/lib/python3.12/site-packages (from matplotlib) (4.56.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./venv/lib/python3.12/site-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: packaging>=20.0 in ./venv/lib/python3.12/site-packages (from matplotlib) (24.2)
+Requirement already satisfied: pillow>=8 in ./venv/lib/python3.12/site-packages (from matplotlib) (11.1.0)
+Requirement already satisfied: pyparsing>=2.3.1 in ./venv/lib/python3.12/site-packages (from matplotlib) (3.2.1)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+[notice] To update, run: pip install --upgrade pip
+Exit Code: 0
+----
