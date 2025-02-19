@@ -7,6 +7,7 @@ A web application that clusters delivery orders based on their geographical loca
 - Clusters orders using DBSCAN algorithm based on:
   - Geographical coordinates (latitude/longitude)
   - Address locality analysis using NLP
+  - clustering of orders based on there product description
 - Interactive web interface
 - Visualization of clusters on a map
 - Detailed cluster information display
