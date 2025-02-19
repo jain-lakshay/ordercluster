@@ -1,1 +1,18 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
 venv/
+*.log
+
+# macOS
+.DS_Store
+
+# Editors
+*.swp
+*.bak
+*~
+venv 2/
+
+
+
