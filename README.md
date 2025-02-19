@@ -1,6 +1,8 @@
 # Order Clustering Application
 
 A web application that clusters delivery orders based on their geographical locations and address localities using machine learning.
+## Preview
+![Alt text for the image](https://i.ibb.co/SDChfHYp/Screenshot-2025-02-19-at-1-04-42-PM.png)
 
 ## Features
 
