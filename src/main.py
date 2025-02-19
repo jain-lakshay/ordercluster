@@ -1,39 +1,32 @@
-import os
-import sys
 import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np
+import spacy
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics.pairwise import haversine_distances
+from math import radians
+from cluster import cluster_orders, print_clusters, plot_clusters  # Import clustering functions
 
-# Ensure the src/ folder is included in the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+# Load NLP Model
+nlp = spacy.load("en_core_web_sm")
 
-# Now import from src.cluster
-from cluster import cluster_orders, print_clusters
+# Sample Data: Orders with descriptions, addresses, and locations
+orders = [
+    {"order_id": 1, "description": "Buy fresh vegetables and fruits", "address": "Sector 15, Rohini, Delhi", "latitude": 28.7041, "longitude": 77.1025},
+    {"order_id": 2, "description": "Order apples and bananas", "address": "Sector 15, Rohini, Delhi", "latitude": 28.7042, "longitude": 77.1026},
+    {"order_id": 3, "description": "Milk and dairy products", "address": "Sector 16, Rohini, Delhi", "latitude": 28.7050, "longitude": 77.1035},
+    {"order_id": 4, "description": "Electronics - Buy a new smartphone", "address": "Connaught Place, Delhi", "latitude": 28.7005, "longitude": 77.1000},
+    {"order_id": 5, "description": "Fresh mangoes and fruits", "address": "Sector 15, Rohini, Delhi", "latitude": 28.7043, "longitude": 77.1027},
+]
 
-# Sample data (You can replace this with actual data from `data/orders.csv`)
-data = {
-    "order_id": [1, 2, 3, 4, 5],
-    "latitude": [28.7041, 28.7042, 28.705, 28.7005, 28.7043],
-    "longitude": [77.1025, 77.1026, 77.1035, 77.1, 77.1027],
-}
+# Convert to DataFrame
+df = pd.DataFrame(orders)
 
-df = pd.DataFrame(data)
+# Perform clustering
+df = cluster_orders(df, eps=0.5, min_samples=2)
 
-# Cluster the orders
-df_clustered = cluster_orders(df, eps=0.2, min_samples=2)  # Try different values
+# Print clustered orders
+print_clusters(df)
 
-
-# Print clusters
-print_clusters(df_clustered)
-# Plot the clustered orders
-plt.figure(figsize=(8,6))
-plt.scatter(df["longitude"], df["latitude"], c=df_clustered["cluster"], cmap="viridis", marker="o", edgecolors="k")
-
-# Labels & Customization
-plt.xlabel("Longitude")
-plt.ylabel("Latitude")
-plt.title("Order Clustering Visualization")
-plt.colorbar(label="Cluster ID")
-plt.grid(True)
-
-# Show plot
-plt.show()
+# Visualize clusters
+plot_clusters(df)
